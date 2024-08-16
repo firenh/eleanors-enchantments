@@ -6,7 +6,11 @@
 		"ItemEnchantmentsComponentMixin",
 		"ForgingScreenHandlerAccessor",
 		"AnvilScreenHandlerAccessor",
-		"AnvilScreenHandlerMixin"
+		"AnvilScreenHandlerMixin",
+		"EnchantmentScreenHandlerMixin",
+		"EnchantmentMixin",
+		"EnchantmentHelperMixin",
+		"ItemStackMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

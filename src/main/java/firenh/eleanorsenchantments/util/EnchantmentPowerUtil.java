@@ -9,6 +9,7 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.EnchantmentTags;
 
 public class EnchantmentPowerUtil {
     public static final int LEVELS_FOR_MAX_ENCHANTMENT = 20;
@@ -35,8 +36,10 @@ public class EnchantmentPowerUtil {
     }
 
     public static int getEnchantmentLevels(RegistryEntry<Enchantment> enchantment, int level) {
-        int x = Math.abs(level - enchantment.value().getMaxLevel());
-        return (int) Math.ceil((double) LEVELS_FOR_MAX_ENCHANTMENT * Math.pow(2, -x));
+        int x = -(level - enchantment.value().getMaxLevel());
+        int levels = (int) Math.ceil((double) LEVELS_FOR_MAX_ENCHANTMENT * Math.pow(2, -x));
+        if (enchantment.isIn(EnchantmentTags.CURSE)) levels = -1 * (levels / 2);
+        return levels;
     }
 
     public static int getMaxLevels() {

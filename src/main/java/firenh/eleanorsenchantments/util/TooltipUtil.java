@@ -15,12 +15,15 @@ public class TooltipUtil {
     public static void appendTooltip(ItemEnchantmentsComponent component, Item.TooltipContext context, Consumer<Text> tooltip, TooltipType type) {
         int maxPower = EnchantmentPowerUtil.getMaxLevels();
         int power = 0;
+        boolean cursesPresent = false;
 
 		for (Entry<RegistryEntry<Enchantment>> entry : component.getEnchantmentEntries()) {
-            power += EnchantmentPowerUtil.getEnchantmentLevels(entry.getKey(), entry.getIntValue());
+            int newPower = EnchantmentPowerUtil.getEnchantmentLevels(entry.getKey(), entry.getIntValue());
+            power += newPower;
+            if (newPower < 0) cursesPresent = true;
         }
 		
-        if (power > 0) {
+        if (power != 0 || cursesPresent) {
             tooltip.accept(
                 Text.translatable("eleanorsenchantments.enchantment_levels", power, maxPower)
                 .formatted(getTooltipColor(power, maxPower))
@@ -31,6 +34,7 @@ public class TooltipUtil {
     private static Formatting getTooltipColor(int power, int maxPower) {
         if (power == maxPower) return Formatting.DARK_PURPLE;
         if (power > maxPower) return Formatting.LIGHT_PURPLE;
+        if (power < 0) return Formatting.DARK_RED;
         return Formatting.GRAY;
     }
 }
