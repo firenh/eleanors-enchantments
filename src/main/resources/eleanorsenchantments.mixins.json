@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "firenh.eleanorsenchantments.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ItemEnchantmentsComponentMixin",
+		"ForgingScreenHandlerAccessor",
+		"AnvilScreenHandlerAccessor",
+		"AnvilScreenHandlerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
