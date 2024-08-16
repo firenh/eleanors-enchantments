@@ -26,15 +26,16 @@ public class TooltipUtil {
         if (power != 0 || cursesPresent) {
             tooltip.accept(
                 Text.translatable("eleanorsenchantments.enchantment_levels", power, maxPower)
-                .formatted(getTooltipColor(power, maxPower))
+                .formatted(getTooltipColor(power, maxPower, cursesPresent))
             );
         }
     }
 
-    private static Formatting getTooltipColor(int power, int maxPower) {
+    private static Formatting getTooltipColor(int power, int maxPower, boolean cursesPresent) {
         if (power == maxPower) return Formatting.DARK_PURPLE;
         if (power > maxPower) return Formatting.LIGHT_PURPLE;
         if (power < 0) return Formatting.DARK_RED;
+        if (power > maxPower / 2) return Formatting.BLUE;
         return Formatting.GRAY;
     }
 }

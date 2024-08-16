@@ -1,6 +1,5 @@
 package firenh.eleanorsenchantments.util;
 
-import firenh.eleanorsenchantments.EleanorsEnchantments;
 import firenh.eleanorsenchantments.mixin.AnvilScreenHandlerAccessor;
 import firenh.eleanorsenchantments.mixin.ForgingScreenHandlerAccessor;
 import net.minecraft.item.ItemStack;

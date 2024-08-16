@@ -1,6 +1,5 @@
 package firenh.eleanorsenchantments.util;
 
-import firenh.eleanorsenchantments.EleanorsEnchantments;
 import it.unimi.dsi.fastutil.objects.Object2IntMap.Entry;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ItemEnchantmentsComponent;
@@ -12,7 +11,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.EnchantmentTags;
 
 public class EnchantmentPowerUtil {
-    public static final int LEVELS_FOR_MAX_ENCHANTMENT = 20;
+    public static final int LEVELS_FOR_MAX_ENCHANTMENT = 16;
     public static final int MAX_LEVELS = 50;
 
     public static int getEnchantmentLevels(ItemStack itemStack) {
@@ -38,7 +37,10 @@ public class EnchantmentPowerUtil {
     public static int getEnchantmentLevels(RegistryEntry<Enchantment> enchantment, int level) {
         int x = -(level - enchantment.value().getMaxLevel());
         int levels = (int) Math.ceil((double) LEVELS_FOR_MAX_ENCHANTMENT * Math.pow(2, -x));
-        if (enchantment.isIn(EnchantmentTags.CURSE)) levels = -1 * (levels / 2);
+        if (enchantment.isIn(EnchantmentTags.CURSE)) levels = -1 * levels;
+        if (enchantment.isIn(EEEnchantmentTags.MAX_LEVELS_075)) levels = (int) Math.ceil(0.75 * levels);
+        if (enchantment.isIn(EEEnchantmentTags.MAX_LEVELS_125)) levels = (int) Math.floor(1.25 * levels);
+        if (enchantment.isIn(EEEnchantmentTags.MAX_LEVELS_150)) levels = (int) Math.floor(1.5 * levels);
         return levels;
     }
 

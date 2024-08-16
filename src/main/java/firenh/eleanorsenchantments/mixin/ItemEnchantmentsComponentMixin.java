@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import firenh.eleanorsenchantments.util.TooltipUtil;
-import net.minecraft.client.gui.tooltip.Tooltip;
 import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.tooltip.TooltipType;

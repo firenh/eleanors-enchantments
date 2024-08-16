@@ -1,0 +1,9 @@
+{
+    "values": [
+        "minecraft:mending",
+        "minecraft:fortune",
+        "minecraft:looting",
+        "minecraft:power",
+        "minecraft:feather_falling"
+    ]
+}
