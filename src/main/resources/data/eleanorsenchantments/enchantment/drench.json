@@ -1,0 +1,187 @@
+{
+	"description": {
+		"translate": "enchantment.eleanorsenchantments.drench"
+	},
+	"supported_items": "#minecraft:enchantable/trident",
+	"weight": 1,
+	"max_level": 1,
+	"min_cost": {
+		"base": 25,
+		"per_level_above_first": 0
+	},
+	"max_cost": {
+		"base": 50,
+		"per_level_above_first": 0
+	},
+	"anvil_cost": 8,
+	"slots": [
+		"mainhand"
+	],
+	"effects": {
+		"minecraft:hit_block": [
+            {
+				"effect": {
+					"type": "minecraft:all_of",
+					"effects": [
+						{
+							"type": "minecraft:play_sound",
+							"sound": "minecraft:entity.generic.splash",
+							"volume": 1,
+							"pitch": {
+								"type": "minecraft:uniform",
+								"min_inclusive": 0.00001,
+								"max_exclusive": 1.5
+							}
+						},
+						{
+							"type": "minecraft:replace_disk",
+							"block_state": {
+								"type": "minecraft:simple_state_provider",
+								"state": {
+									"Name": "minecraft:water",
+									"Properties": {
+										"level": "14"
+									}
+								}
+							},
+							"predicate": {
+								"type": "minecraft:matching_blocks",
+								"offset": [
+									0,
+									0,
+									0
+								],
+								"blocks": "#eleanorsenchantments:drench_replaceable"
+							},
+							"radius": 2,
+							"height": 1,
+							"offset": [
+								0,
+								1,
+								0
+							]
+						}
+					]
+				},
+				"requirements": {
+					"condition": "minecraft:location_check",
+					"offsetX": 0,
+					"offsetY": 1,
+					"offsetZ": 0,
+					"predicate": {
+						"block": {
+							"blocks": "minecraft:water"
+						}
+					}
+				}
+			},
+			{
+				"effect": {
+					"type": "minecraft:all_of",
+					"effects": [
+						{
+							"type": "minecraft:play_sound",
+							"sound": "minecraft:entity.generic.splash",
+							"volume": 1,
+							"pitch": {
+								"type": "minecraft:uniform",
+								"min_inclusive": 0.00001,
+								"max_exclusive": 1.5
+							}
+						},
+						{
+							"type": "minecraft:replace_disk",
+							"block_state": {
+								"type": "minecraft:simple_state_provider",
+								"state": {
+									"Name": "minecraft:water",
+									"Properties": {
+										"level": "14"
+									}
+								}
+							},
+							"predicate": {
+								"type": "minecraft:matching_blocks",
+								"offset": [
+									0,
+									0,
+									0
+								],
+								"blocks": "#eleanorsenchantments:drench_replaceable"
+							},
+							"radius": 1,
+							"height": 1,
+							"offset": [
+								0,
+								1,
+								0
+							]
+						}
+					]
+				},
+				"requirements": {
+					"condition": "minecraft:location_check",
+					"offsetX": 0,
+					"offsetY": 1,
+					"offsetZ": 0,
+					"predicate": {
+						"block": {
+							"blocks": "#minecraft:air"
+						}
+					}
+				}
+			}
+		],
+		"minecraft:post_attack": [
+			{
+				"enchanted": "attacker",
+				"affected": "victim",
+				"effect": {
+					"type": "minecraft:all_of",
+					"effects": [
+						{
+							"type": "minecraft:play_sound",
+							"sound": "minecraft:entity.generic.splash",
+							"volume": 1,
+							"pitch": 0.00001
+						},
+						{
+							"type": "minecraft:replace_disk",
+							"block_state": {
+								"type": "minecraft:simple_state_provider",
+								"state": {
+									"Name": "minecraft:water",
+									"Properties": {
+										"level": "14"
+									}
+								}
+							},
+							"predicate": {
+								"type": "minecraft:matching_blocks",
+								"blocks": "#minecraft:air"
+							},
+							"radius": 2,
+							"height": 1,
+							"offset": [
+								0,
+								0,
+								0
+							]
+						}
+					]
+				},
+				"requirements": {
+					"condition": "minecraft:location_check",
+					"offsetX": 0,
+					"offsetY": 1,
+					"offsetZ": 0,
+					"predicate": {
+						"block": {
+							"blocks": "#eleanorsenchantments:drench_replaceable"
+						}
+					}
+				}
+			}
+		]
+	}
+}

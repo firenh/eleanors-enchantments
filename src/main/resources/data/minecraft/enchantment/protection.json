@@ -1,0 +1,50 @@
+{
+	"description": {
+		"translate": "enchantment.minecraft.protection"
+	},
+	"exclusive_set": "#minecraft:exclusive_set/armor",
+	"supported_items": "#minecraft:enchantable/armor",
+	"weight": 10,
+	"max_level": 4,
+	"min_cost": {
+		"base": 1,
+		"per_level_above_first": 11
+	},
+	"max_cost": {
+		"base": 12,
+		"per_level_above_first": 11
+	},
+	"anvil_cost": 1,
+	"slots": [
+		"armor"
+	],
+	"effects": {
+		"minecraft:damage_protection": [
+			{
+				"effect": {
+					"type": "minecraft:add",
+					"value": {
+						"type": "minecraft:linear",
+						"base": 1,
+						"per_level_above_first": 1
+					}
+				},
+				"requirements": {
+					"condition": "minecraft:damage_source_properties",
+					"predicate": {
+						"tags": [
+							{
+								"id": "eleanorsenchantments:bypasses_protection",
+								"expected": false
+							},
+							{
+								"id": "minecraft:bypasses_invulnerability",
+								"expected": false
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}

@@ -10,4 +10,10 @@ import net.minecraft.screen.Property;
 public interface AnvilScreenHandlerAccessor {
     @Accessor("levelCost")
     public Property getLevelCostProperty();
+
+    @Accessor
+    public int getRepairItemUsage();
+    
+    @Accessor("repairItemUsage")
+    public void setRepairItemUsage(int repairItemUsage);
 }

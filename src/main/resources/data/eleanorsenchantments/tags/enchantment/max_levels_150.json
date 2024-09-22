@@ -4,6 +4,7 @@
         "minecraft:fortune",
         "minecraft:looting",
         "minecraft:power",
-        "minecraft:feather_falling"
+        "minecraft:feather_falling",
+        "eleanorsenchantments:heavyweight_curse"
     ]
 }

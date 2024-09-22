@@ -5,6 +5,9 @@
         "minecraft:unbreaking",
         "minecraft:silk_touch",
         "minecraft:protection",
-        "minecraft:unbreaking"
+        "minecraft:unbreaking",
+        "minecraft:infinity",
+        "eleanorsenchantments:atrophy_curse",
+        "eleanorsenchantments:growth"
     ]
 }

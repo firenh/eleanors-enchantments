@@ -29,7 +29,7 @@ public class EnchantingUtil {
                 EnchantmentLevelEntry newEntry = new EnchantmentLevelEntry(entry.enchantment, entry.level + 1);
 
                 if (power + EnchantmentPowerUtil.getEnchantmentLevels(entry.enchantment, entry.level) <= EnchantmentPowerUtil.getMaxLevels()) {
-                    EleanorsEnchantments.log("Powering up enchantment!");
+                    // EleanorsEnchantments.log("Powering up enchantment!");
                     entry = newEntry;
                 }
             }

@@ -1,0 +1,129 @@
+{
+	"description": {
+		"translate": "enchantment.eleanorsenchantments.magic_protection"
+	},
+	"exclusive_set": "#minecraft:exclusive_set/armor",
+	"supported_items": "#minecraft:enchantable/armor",
+	"weight": 5,
+	"max_level": 4,
+	"min_cost": {
+		"base": 10,
+		"per_level_above_first": 8
+	},
+	"max_cost": {
+		"base": 18,
+		"per_level_above_first": 8
+	},
+	"anvil_cost": 2,
+	"slots": [
+		"armor"
+	],
+	"effects": {
+		"minecraft:attributes": [
+			{
+				"id": "minecraft:enchantment.fire_protection",
+				"attribute": "minecraft:generic.burning_time",
+				"amount": {
+					"type": "minecraft:linear",
+					"base": -0.25,
+					"per_level_above_first": -0.2
+				},
+				"operation": "add_multiplied_base"
+			}
+		],
+		"minecraft:damage_protection": [
+			{
+				"effect": {
+					"type": "minecraft:add",
+					"value": {
+						"type": "minecraft:linear",
+						"base": 2,
+						"per_level_above_first": 2
+					}
+				},
+				"requirements": {
+					"condition": "minecraft:all_of",
+					"terms": [
+						{
+							"condition": "minecraft:damage_source_properties",
+							"predicate": {
+								"tags": [
+									{
+										"id": "eleanorsenchantments:is_magic",
+										"expected": true
+									},
+									{
+										"id": "minecraft:bypasses_invulnerability",
+										"expected": false
+									}
+								]
+							}
+						}
+					]
+				}
+			}
+		],
+		"minecraft:damage_immunity": [
+			{
+				"effect": {},
+				"requirements": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"components": {
+										"minecraft:enchantments": {
+											"levels": {
+												"eleanorsenchantments:magic_protection": 4
+											}
+										}
+									}
+								},
+								"chest": {
+									"components": {
+										"minecraft:enchantments": {
+											"levels": {
+												"eleanorsenchantments:magic_protection": 4
+											}
+										}
+									}
+								},
+								"legs": {
+									"components": {
+										"minecraft:enchantments": {
+											"levels": {
+												"eleanorsenchantments:magic_protection": 4
+											}
+										}
+									}
+								},
+								"feet": {
+									"components": {
+										"minecraft:enchantments": {
+											"levels": {
+												"eleanorsenchantments:magic_protection": 4
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:damage_source_properties",
+						"predicate": {
+							"tags": [
+								{
+									"id": "eleanorsenchantments:is_magic",
+									"expected": true
+								}
+							]
+						}
+					}
+				]
+			}
+		]
+	}
+}

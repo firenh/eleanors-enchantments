@@ -1,0 +1,80 @@
+{
+	"description": {
+		"translate": "enchantment.eleanorsenchantments.hurricane"
+	},
+	"supported_items": "#minecraft:enchantable/trident",
+	"weight": 1,
+	"max_level": 3,
+	"min_cost": {
+		"base": 25,
+		"per_level_above_first": 0
+	},
+	"max_cost": {
+		"base": 50,
+		"per_level_above_first": 0
+	},
+	"anvil_cost": 8,
+	"slots": [
+		"mainhand"
+	],
+	"effects": {
+		"minecraft:hit_block": [
+			{
+				"effect": {
+					"type": "minecraft:explode",
+					"radius": 3.5,
+					"offset": [
+						0,
+						0.1,
+						0
+					],
+					"block_interaction": "trigger",
+					"small_particle": {
+						"type": "minecraft:gust_emitter_small"
+					},
+					"large_particle": {
+						"type": "minecraft:gust_emitter_large"
+					},
+					"sound": "minecraft:entity.wind_charge.wind_burst",
+					"immune_blocks": "#minecraft:blocks_wind_charge_explosions",
+					"knockback_multiplier": {
+                        "type": "minecraft:linear",
+                        "base": 0.5,
+                        "per_level_above_first": 0.25
+					},
+					"attribute_to_user": true
+				}
+			}
+		],
+		"minecraft:post_attack": [
+			{
+				"enchanted": "attacker",
+				"affected": "victim",
+				"effect": {
+					"type": "minecraft:explode",
+					"radius": 3.5,
+					"offset": [
+						0,
+						0.1,
+						0
+					],
+					"block_interaction": "trigger",
+					"small_particle": {
+						"type": "minecraft:gust_emitter_small"
+					},
+					"large_particle": {
+						"type": "minecraft:gust_emitter_large"
+					},
+					"sound": "minecraft:entity.wind_charge.wind_burst",
+					"immune_blocks": "#minecraft:blocks_wind_charge_explosions",
+					"knockback_multiplier": {
+                        "type": "minecraft:linear",
+                        "base": 1,
+                        "per_level_above_first": 0.75
+					},
+					"attribute_to_user": true
+				}
+			}
+		]
+	}
+}

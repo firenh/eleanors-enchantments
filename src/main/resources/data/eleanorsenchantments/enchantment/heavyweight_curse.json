@@ -1,0 +1,54 @@
+{
+	"description": {
+		"translate": "enchantment.eleanorsenchantments.heavyweight_curse"
+	},
+	"supported_items": "#minecraft:enchantable/durability",
+	"weight": 10,
+	"max_level": 5,
+	"min_cost": {
+		"base": 1,
+		"per_level_above_first": 10
+	},
+	"max_cost": {
+		"base": 51,
+		"per_level_above_first": 10
+	},
+	"anvil_cost": 1,
+	"slots": [
+		"any"
+	],
+	"effects": {
+		"minecraft:attributes": [
+			{
+				"id": "eleanorsenchantments:enchantment.heavyweight_curse",
+				"attribute": "minecraft:generic.movement_speed",
+				"amount": {
+					"type": "minecraft:linear",
+					"base": -0.1,
+					"per_level_above_first": -0.1
+				},
+				"operation": "add_multiplied_total"
+			},
+			{
+				"id": "eleanorsenchantments:enchantment.heavyweight_curse",
+				"attribute": "minecraft:generic.jump_strength",
+				"amount": {
+					"type": "minecraft:linear",
+					"base": -0.075,
+					"per_level_above_first": -0.075
+				},
+				"operation": "add_multiplied_total"
+			},
+			{
+				"id": "eleanorsenchantments:enchantment.heavyweight_curse",
+				"attribute": "minecraft:generic.attack_speed",
+				"amount": {
+					"type": "minecraft:linear",
+					"base": -0.05,
+					"per_level_above_first": -0.05
+				},
+				"operation": "add_multiplied_total"
+			}
+		]
+	}
+}

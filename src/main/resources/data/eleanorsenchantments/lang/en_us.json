@@ -1,3 +1,16 @@
 {
-    "eleanorsenchantments.enchantment_levels": "Levels: %1$s / %2$s"
+    "eleanorsenchantments.enchantment_levels": "Levels: %1$s / %2$s",
+    "enchantment.eleanorsenchantments.unravelling": "Unravelling",
+    "enchantment.eleanorsenchantments.brutality": "Brutality",
+    "enchantment.eleanorsenchantments.atrophy_curse": "Curse of Atrophy",
+    "enchantment.eleanorsenchantments.bashing": "Bashing",
+    "enchantment.eleanorsenchantments.magic_protection": "Magic Protection",
+    "enchantment.eleanorsenchantments.heavyweight_curse": "Curse of Heavyweight",
+    "enchantment.eleanorsenchantments.growth": "Growth",
+    "enchantment.eleanorsenchantments.hurricane": "Hurricane",
+    "enchantment.eleanorsenchantments.drench": "Drench",
+    "enchantment.eleanorsenchantments.voidhaste": "Voidhaste",
+    "enchantment.eleanorsenchantments.ice_encasement": "Ice Encasement",
+    "death.attack.brutality": "%1$s went out in a frenzy"
+    
 }

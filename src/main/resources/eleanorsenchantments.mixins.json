@@ -10,7 +10,8 @@
 		"EnchantmentScreenHandlerMixin",
 		"EnchantmentMixin",
 		"EnchantmentHelperMixin",
-		"ItemStackMixin"
+		"ItemStackMixin",
+		"CobwebBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

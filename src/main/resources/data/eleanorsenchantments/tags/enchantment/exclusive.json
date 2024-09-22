@@ -3,6 +3,8 @@
         "minecraft:silk_touch",
         "minecraft:fortune",
         "minecraft:loyalty",
-        "minecraft:riptide"
+        "minecraft:riptide",
+        "minecraft:unbreaking",
+        "eleanorsenchantments:atrophy_curse"
     ]
 }

@@ -4,6 +4,12 @@
         "minecraft:piercing",
         "minecraft:impaling",
         "minecraft:soul_speed",
-        "minecraft:frost_walker"
+        "minecraft:frost_walker",
+        "minecraft:quick_charge",
+        "minecraft:fire_protection",
+        "minecraft:blast_protection",
+        "minecraft:projectile_protection",
+        "eleanorsenchantments:bashing",
+        "eleanorsenchantments:hurricane"
     ]
 }
